@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TodoListContext } from '../store/TodoListContext_store';
 
-function List({todos,onDelete,onCompleate}) {
- 
+function List({onDelete,onCompleate}) {
+ const {todos}=useContext(TodoListContext)
   return (
     <div>
       <table>
